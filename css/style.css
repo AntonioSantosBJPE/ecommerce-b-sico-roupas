@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0px 4px 40px -15px rgba(0, 0, 0, 0.25);
+}
+    .logo{
+        margin-left: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin-right: 50px;
+        gap: 15px;
+    }
+    .menu li:hover{
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+.main{
+    display: flex;
+    margin: 40px 50px 50px 50px;
+    background-color: white;
+}
+
+.vitrine{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pesquisa-carrinho{
+    max-width: 400px;
+}
+
+.cards {
+    width: 250px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    border: 2px solid #F5F5F5;
+    box-sizing: border-box;
+    
+}
+    .cards:hover{
+        border: 2px solid #2E245E;;
+    }
+    .card-img{
+        background-color: #F5F5F5;
+        max-width: 250px;
+        max-height: 140px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .card-nome-produto{
+        height: 30px;
+        margin: 10px;
+        font-weight: bold;
+    }
+    .card-tag{
+        height: 30px;
+        margin: 10px;
+        
+    }
+        .card-tag p{
+            width: 70px;
+            background-color: #2E245E;
+            color: white;
+            padding: 5px;
+        }
+    .card-descriçao{
+        height: 80px;
+        margin: 10px;
+    }
+    .card-preço{
+        height: 30px; 
+        margin: 10px;
+        color: #2E245E;
+        font-weight: bold;
+    }
+    .card-add-carrinho{
+        height: 30px;
+        margin: 10px;
+        
+    }
+        .card-add-carrinho:hover{
+            cursor: pointer;
+            font-weight: bold;
+            color: #37268C;
+        }
+
+.box-pesquisa-carrinho{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     
+}
+
+    .pesquisar-produto{
+        margin-left: 20px;
+        max-width:280px ;
+        height: 40px;
+        gap: 10px;
+        display: flex;  
+    }
+        .pesquisar-produto input{
+            width: 200px;
+            height: 40px;
+            border: none;
+            background-color: #F5F5F5;
+            padding-left: 15px;
+        }
+        .pesquisar-produto button{
+            width: 80px;
+            height: 40px;
+            border: none;
+            background-color: #2E245E;
+            color: white;
+            padding: 10px;
+        }
+            .pesquisar-produto button:hover{
+                background-color: #37268C;
+                cursor: pointer;
+            }
+    
+    .carrinho-compras{
+        margin-left: 20px;
+        width: 280px;        
+    }
+        .carrinho-compras-titulo{
+            max-width:280px ;
+            height: 40px;
+            background-color: #37268C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        .carrinho-compras-off-itens{
+            max-width:280px ;
+            height: 180px;
+            background-color: #F5F5F5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+/* ---------------------------------------------- */
+        .carrinho-compras-on-itens{
+            max-width:280px ;
+            height: 340px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        
+            .carrinho-compras-cards{
+                width:280px ;
+                height: 340px;
+                background-color: #F5F5F5;
+                overflow: auto;
+                display: flex;
+                flex-direction: column;
+            }
+                .carrinho-card{
+                    max-width: 280px;
+                    height: 80px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    background-color: #F5F5F5;
+                    margin-top: 20px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    gap: 10px;
+                    box-sizing: border-box;
+                }
+                    .carrinho-card-img{
+                        width: 80px;
+                        height: 80px;
+                        background-color: white;
+                    }
+                        .carrinho-card-img img{
+                            width: 80px;
+                            height: 80px; 
+                        }
+
+                    .carrinho-card-infos{
+                        width: 170px;
+                        height: 80px;
+                        background-color: #F5F5F5;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                    }
+                        .carrinho-card-nome{
+                            font-weight: bold;
+                        }
+                        .carrinho-card-preco{
+                            font-weight: bold;
+                            color: #2E245E;
+                        }
+                       
+                        .carrinho-card-remove-produto:hover{
+                            cursor: pointer;
+                            font-weight: bold;
+                            color: #2E245E;
+                        }
+
+            .carrinho-compras-infos{
+                width:280px ;
+                height: 80px;
+                background-color: #333333;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                color: white;
+            }
+                .carrinho-compras-infos-quantidade{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                .carrinho-compras-infos-valor{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
