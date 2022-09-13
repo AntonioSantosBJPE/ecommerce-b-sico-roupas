@@ -61,7 +61,7 @@ function criarVitrine (tag){
     
     //limpando o html dentro da ul vitrine de produtos
     tagUlVitrine.innerHTML=""
-
+    let itemNoFiltro = false
     //percorrendo o array data 
     for (let i=0; i<data.length;i++){
         
@@ -71,15 +71,23 @@ function criarVitrine (tag){
         } else { // entra aqui sempre que o produto tiver apenas uma tag (padrao utilizado)
             if (tag==="Todos"){         
                 criarElementoCard(i)
+                itemNoFiltro = true
             } else {
                 if (data[i].tag[0]===tag){
                     criarElementoCard(i)
+                    itemNoFiltro = true
                 }
             }
             
         }
          
     }
+
+    if (itemNoFiltro===false){
+        alert(" Nenhum item foi encontrado no filtro!")
+    }
+
+
 }
 
 //cria a section carrinhos de compras no formato sem produtos
@@ -286,6 +294,7 @@ function pesquisarPorNome(){
 
         //usando a funcao toUpperCase para evitar o problema da diferença entre letras maiusculas e minusculas
         let textoPesquisar = input.value.toUpperCase()
+        textoPesquisar = textoPesquisar.trim()
         input.value=""
         
         if (textoPesquisar !==""){
@@ -319,8 +328,13 @@ function pesquisarPorNome(){
                 }
 
             }
+
+            if (cont===0){ // caso nenhum item seja encontrado na pesquisa
+                alert(" Nenhum item foi encontrado na busca!")
+            }
+
         }else{
-            alert(" O campo de pesquisa está vázio")
+            alert(" O campo de pesquisa está vázio!")
         }
        
 
